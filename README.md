@@ -1,49 +1,71 @@
 # EduMart - Sàn Giáo Dục Thương Mại Điện Tử với AI
 
-Một sàn giáo dục thương mại điện tử hiện đại được xây dựng với React.js, tích hợp các tính năng AI thông minh để cải thiện trải nghiệm người dùng.
+Một sàn giáo dục thương mại điện tử hiện đại được xây dựng với React.js, tích hợp các tính năng AI thông minh và hệ thống đăng nhập để cải thiện trải nghiệm người dùng.
 
 ## 🌟 Tính năng nổi bật
 
-### 📚 Quản lý khóa học
-- **Hiển thị danh sách khóa học**: Grid layout responsive với thông tin chi tiết
-- **Chi tiết khóa học**: Modal popup với đầy đủ thông tin, nội dung học, kỹ năng đạt được
-- **Phân loại khóa học**: Lập trình, Ngoại ngữ, Thiết kế, Marketing, Sức khỏe, Tài chính
+### � Hệ thống đăng nhập/đăng ký
+- **Đăng nhập/Đăng ký**: Form đầy đủ với validation
+- **Bảo vệ route**: Các trang yêu cầu đăng nhập được bảo vệ
+- **Quản lý session**: Lưu trữ thông tin người dùng
+- **Redirect thông minh**: Chuyển hướng sau khi đăng nhập
+- **UI/UX hiện đại**: Giao diện đẹp với animation
 
-### 🔍 Tìm kiếm và lọc
-- **Tìm kiếm thông minh**: Tìm theo tên, mô tả, danh mục
-- **Lọc theo giá**: Dưới 500K, 500K-1M, trên 1M
-- **Lọc theo danh mục**: 7 danh mục chính
-- **Kết quả realtime**: Cập nhật ngay khi thay đổi bộ lọc
+### �📚 Quản lý khóa học
+- **Hiển thị danh sách**: Grid layout responsive với lazy loading
+- **Chi tiết khóa học**: Trang riêng với đầy đủ thông tin
+- **Phân loại khóa học**: Lập trình, AI/ML, Data Science, Mobile, v.v.
+- **Skeleton loading**: Hiệu ứng loading khi tải dữ liệu
+- **Error handling**: Xử lý lỗi một cách graceful
 
-### 🤖 Tính năng AI
-- **Gợi ý thông minh**: AI phân tích và đề xuất khóa học phù hợp
-- **Chatbot tư vấn**: Trò chuyện với AI để tìm khóa học theo nhu cầu
-- **Phân tích hành vi**: Dựa trên lịch sử xem và sở thích
-- **Loading skeleton**: Hiệu ứng loading khi AI đang xử lý
+### 🔍 Tìm kiếm và lọc nâng cao
+- **Tìm kiếm realtime**: Tìm theo tên, mô tả, giảng viên
+- **Lọc theo giá**: Nhiều khoảng giá linh hoạt
+- **Lọc theo danh mục**: 10+ danh mục chi tiết
+- **Lọc theo trình độ**: Cơ bản, Trung cấp, Nâng cao
+- **URL parameters**: Lưu trạng thái search trong URL
+
+### 🤖 AI thông minh
+- **Gợi ý cá nhân hóa**: AI phân tích hành vi và đưa ra gợi ý
+- **Thuật toán thông minh**: Dựa trên lịch sử, sở thích, giỏ hàng
+- **AI Score Badge**: Hiển thị điểm AI và lý do gợi ý
+- **Chatbot tư vấn**: Trò chuyện với AI (tính năng mở rộng)
+- **Machine Learning**: Học từ hành vi người dùng
 
 ### 💝 Quản lý yêu thích
-- **Thêm/xóa yêu thích**: Click vào icon trái tim
-- **Danh sách yêu thích**: Modal hiển thị tất cả khóa học đã yêu thích
-- **Lưu trữ local**: Dữ liệu được lưu trong localStorage
-- **Xóa hàng loạt**: Nút xóa tất cả yêu thích
+- **Toast animation**: Hiệu ứng đẹp mắt khi thêm/xóa
+- **Trang riêng**: `/favorites` với quản lý đầy đủ
+- **Sync dữ liệu**: Đồng bộ với localStorage
+- **Bulk actions**: Xóa tất cả, quản lý hàng loạt
+- **Floating hearts**: Animation trái tim bay khi yêu thích
 
-### 🛒 Giỏ hàng
-- **Thêm vào giỏ**: Nút thêm vào giỏ hàng trên mỗi khóa học
-- **Quản lý giỏ hàng**: Xem, xóa, tính tổng tiền
-- **Thanh toán**: Giao diện thanh toán (demo)
-- **Persistent storage**: Lưu trữ trong localStorage
+### 🛒 Giỏ hàng nâng cao
+- **Trang riêng**: `/cart` với giao diện chuyên nghiệp
+- **Tính tổng tiền**: Hiển thị tổng giá trị đơn hàng
+- **Quản lý items**: Thêm, xóa, cập nhật số lượng
+- **Persistent storage**: Lưu trữ bền vững
+- **Checkout flow**: Luồng thanh toán hoàn chỉnh
 
-### 📖 Lịch sử xem
-- **Tự động ghi nhận**: Lưu lại khóa học đã xem
-- **Hiển thị gần đây**: 6 khóa học xem gần nhất
-- **Xem lại nhanh**: Click để xem lại chi tiết
-- **Xóa lịch sử**: Nút xóa toàn bộ lịch sử
+### 📖 Lịch sử xem thông minh
+- **Trang Home**: Hiển thị 4 khóa học gần nhất
+- **Trang riêng**: `/history` với tìm kiếm và lọc
+- **Auto tracking**: Tự động ghi nhận khi xem chi tiết
+- **Search trong lịch sử**: Tìm kiếm nhanh trong lịch sử
+- **Responsive design**: Hiển thị tốt trên mọi thiết bị
 
-### 💬 Chatbot AI tư vấn
-- **Giao diện chat**: UI giống messenger hiện đại
-- **Tư vấn thông minh**: AI hiểu ngữ cảnh và đưa ra gợi ý
-- **Hiển thị khóa học**: Kết quả tư vấn kèm thông tin khóa học
-- **Câu hỏi gợi ý**: Quick buttons cho các câu hỏi phổ biến
+### 🎨 UI/UX hiện đại
+- **Responsive design**: Hoạt động tốt trên mọi thiết bị
+- **Loading states**: Skeleton loading cho mọi component
+- **Error boundaries**: Xử lý lỗi graceful
+- **Toast notifications**: Thông báo đẹp mắt với animation
+- **Dark mode ready**: Chuẩn bị sẵn cho chế độ tối
+
+### 🔗 Routing nâng cao
+- **React Router**: Navigation mượt mà giữa các trang
+- **Protected routes**: Bảo vệ trang cần đăng nhập
+- **Dynamic routing**: Route động cho course detail
+- **404 handling**: Xử lý trang không tồn tại
+- **Back navigation**: Nút quay lại thông minh
 
 ## 🛠️ Cài đặt và chạy dự án
 
@@ -51,19 +73,25 @@ Một sàn giáo dục thương mại điện tử hiện đại được xây d
 - Node.js >= 14.0.0
 - npm >= 6.0.0
 
-### Bước 1: Cài đặt dependencies
+### Bước 1: Clone repository
+```bash
+git clone https://github.com/ToHoanghuy/ecommerce
+cd ecommerce
+```
+
+### Bước 2: Cài đặt dependencies
 ```bash
 npm install
 ```
 
-### Bước 2: Chạy development server
+### Bước 3: Chạy development server
 ```bash
 npm start
 ```
 
 Ứng dụng sẽ chạy tại http://localhost:3000
 
-### Bước 3: Build production
+### Bước 4: Build production
 ```bash
 npm run build
 ```
@@ -73,20 +101,35 @@ npm run build
 ```
 src/
 ├── components/           # React components
-│   ├── Header.js        # Navigation header
+│   ├── Header.js        # Navigation header với auth
+│   ├── Layout.js        # Layout wrapper component
 │   ├── Filter.js        # Search & filter component
 │   ├── CourseCard.js    # Individual course card
-│   ├── CourseModal.js   # Course details modal
-│   ├── FavoritesModal.js # Favorites list modal
-│   ├── SuggestionsModal.js # AI suggestions modal
 │   ├── CartModal.js     # Shopping cart modal
-│   ├── Chatbot.js       # AI chatbot component
+│   ├── AuthModal.js     # Login/Register modal
 │   ├── ViewHistory.js   # View history component
-│   └── LoadingSkeleton.js # Loading placeholders
+│   ├── LazyLoadCourses.js # Lazy loading courses
+│   ├── LoadingSkeleton.js # Loading placeholders
+│   ├── Toast.js         # Toast notification system
+│   ├── AIScoreBadge.js  # AI score display
+│   └── ProtectedRoute.js # Route protection
+├── pages/               # Page components
+│   ├── HomePage.js      # Main homepage
+│   ├── CourseDetail.js  # Course detail page
+│   ├── Favorites.js     # Favorites management
+│   ├── Cart.js          # Shopping cart page
+│   ├── AISuggestions.js # AI suggestions page
+│   ├── History.js       # View history page
+│   └── Auth.js          # Login/Register page
 ├── context/             # React Context
-│   └── AppContext.js    # Global state management
+│   ├── AppContext.js    # Global app state
+│   ├── AuthContext.js   # Authentication state
+│   └── ToastContext.js  # Toast notifications
+├── services/            # API services
+│   └── api.js          # API calls & mock data
 ├── data/                # Mock data
-│   └── mockData.js      # Courses data & API simulation
+│   ├── mockData.js     # Courses data
+│   └── mockUsers.js    # Users data
 ├── App.js              # Main app component
 ├── App.css             # Global styles
 └── index.js            # App entry point
@@ -94,69 +137,91 @@ src/
 
 ## 🎯 Hướng dẫn sử dụng
 
-### 1. Tìm kiếm khóa học
+### 1. Đăng nhập/Đăng ký
+- Truy cập `/auth` hoặc click nút đăng nhập
+- **Demo account**: `nguyenvana@example.com` / `123456`
+- Đăng ký tài khoản mới với email và mật khẩu
+- Tự động redirect sau khi đăng nhập thành công
+
+### 2. Tìm kiếm khóa học
 - Sử dụng thanh tìm kiếm ở header
-- Chọn danh mục từ bộ lọc
-- Lọc theo khoảng giá phù hợp
+- Áp dụng filter theo danh mục, giá, trình độ
+- Xem kết quả realtime với lazy loading
 
-### 2. Xem chi tiết khóa học
+### 3. Xem chi tiết khóa học
 - Click vào khóa học hoặc nút "Xem chi tiết"
-- Modal sẽ hiển thị đầy đủ thông tin
-- Có thể thêm vào yêu thích hoặc giỏ hàng
+- Trang riêng với đầy đủ thông tin
+- Thêm vào yêu thích hoặc giỏ hàng với toast animation
 
-### 3. Sử dụng AI
-- Click nút "Gợi ý sản phẩm phù hợp" để nhận gợi ý
-- Mở chatbot để tư vấn trực tiếp
-- AI sẽ phân tích và đưa ra khuyến nghị
+### 4. Sử dụng AI Suggestions
+- **Yêu cầu đăng nhập**: Tính năng chỉ dành cho thành viên
+- AI phân tích lịch sử, sở thích, giỏ hàng
+- Nhận gợi ý cá nhân hóa với AI Score
+- Refresh để có gợi ý mới
 
-### 4. Quản lý yêu thích và giỏ hàng
-- Click icon trái tim để thêm/xóa yêu thích
-- Click icon giỏ hàng để xem giỏ hàng
-- Quản lý các item trong modal tương ứng
+### 5. Quản lý yêu thích và giỏ hàng
+- Click icon trái tim với animation floating hearts
+- Quản lý danh sách yêu thích tại `/favorites`
+- Xem giỏ hàng tại `/cart` với tính năng đầy đủ
+
+### 6. Lịch sử xem
+- Tự động ghi nhận khi xem chi tiết khóa học
+- Xem 4 khóa học gần nhất ở homepage
+- Xem toàn bộ lịch sử tại `/history` với tìm kiếm
+
+## 🚀 Công nghệ sử dụng
+
+### Frontend
+- **React 19.1.0**: UI library hiện đại
+- **React Router 7.6.3**: Client-side routing
+- **Lucide React**: Icon library đẹp
+- **Axios**: HTTP client cho API calls
+
+### State Management
+- **React Context**: Global state management
+- **Local Storage**: Persistent data storage
+- **Custom Hooks**: Reusable logic
+
+### Styling
+- **CSS Modules**: Component-scoped styling
+- **Responsive Design**: Mobile-first approach
+- **CSS Animations**: Smooth transitions
+
+### Tools & Libraries
+- **React Scripts**: Build tooling
+- **ESLint**: Code linting
+- **Web Vitals**: Performance monitoring
+
+## 📱 Responsive Design
+
+Ứng dụng được thiết kế responsive cho:
+- **Desktop**: > 1200px
+- **Tablet**: 768px - 1199px  
+- **Mobile**: < 768px
+
+Tất cả components đều tối ưu cho mobile với:
+- Touch-friendly interface
+- Optimized loading states
+- Compressed layouts
+
+## 🧪 Testing
+
+```bash
+# Chạy tests
+npm test
+
+# Chạy tests với coverage
+npm test -- --coverage
+```
 
 ## 🚀 Triển khai
 
-### Vercel (Recommended)
-1. Push code lên GitHub
-2. Import project vào Vercel
-3. Deploy tự động
+### Vercel 
+link: https://ecommerce-nu-smoky-85.vercel.app/
 
-### Netlify
-1. Build project: `npm run build`
-2. Drag & drop folder `build` vào Netlify
-
-## 🔮 Tính năng trong tương lai
-
-- [ ] **Authentication**: Đăng nhập/đăng ký người dùng
-- [ ] **Payment Integration**: Tích hợp cổng thanh toán
-- [ ] **Reviews System**: Đánh giá và bình luận khóa học
-- [ ] **Progress Tracking**: Theo dõi tiến độ học
-- [ ] **Advanced AI**: Machine learning recommendations
 
 ---
 
 ⭐ **Nếu dự án hữu ích, hãy cho một star trên GitHub!** ⭐
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Được phát triển với ❤️ bởi EduMart Team**
