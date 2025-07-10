@@ -35,7 +35,7 @@ const CourseCard = ({ course, onViewDetails }) => {
   const handleViewDetails = () => {
     console.log('CourseCard - handleViewDetails called', { course, courseId: course.id });
     dispatch({ type: actionTypes.ADD_TO_VIEW_HISTORY, payload: course.id });
-    onViewDetails(course.id);
+    onViewDetails(course.id || course);
   };
 
   const formatPrice = (price) => {

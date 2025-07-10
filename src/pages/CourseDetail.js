@@ -95,9 +95,9 @@ const CourseDetail = () => {
     <div className="course-detail-page">
       <div className="container">
         {/* Back Button */}
-        <button onClick={() => navigate(-1)} className="back-btn">
+        <button onClick={() => navigate(-1)} className="back-button">
           <ArrowLeft />
-          Quay lại
+          <span>Quay lại</span>
         </button>
 
         {/* Course Header */}

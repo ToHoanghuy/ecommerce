@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAppState } from '../context/AppContext';
 import Filter from '../components/Filter';
 import LazyLoadCourses from '../components/LazyLoadCourses';
@@ -6,7 +7,12 @@ import ViewHistory from '../components/ViewHistory';
 import './HomePage.css';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const state = useAppState();
+
+  const handleViewDetails = (course) => {
+    navigate(`/course/${course.id}`);
+  };
 
   return (
     <div className="home-page">
@@ -34,7 +40,7 @@ const HomePage = () => {
         </section>
 
         {/* View History Section */}
-        <ViewHistory />
+        <ViewHistory onViewDetails={handleViewDetails} />
         
         {/* Filter Section */}
         <Filter />
