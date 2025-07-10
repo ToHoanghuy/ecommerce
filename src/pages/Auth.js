@@ -14,8 +14,8 @@ const Auth = () => {
   
   const [mode, setMode] = useState(initialMode);
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: initialMode === 'login' ? 'nguyenvana@example.com' : '',
+    password: initialMode === 'login' ? '123456' : '',
     name: '',
     confirmPassword: ''
   });
@@ -40,6 +40,23 @@ const Auth = () => {
     setMode(initialMode);
     setRegisterSuccess(false);
     setErrors({});
+    
+    // Set default values based on mode
+    if (initialMode === 'login') {
+      setFormData({
+        email: 'nguyenvana@example.com',
+        password: '123456',
+        name: '',
+        confirmPassword: ''
+      });
+    } else {
+      setFormData({
+        email: '',
+        password: '',
+        name: '',
+        confirmPassword: ''
+      });
+    }
   }, [initialMode]);
 
   const validateForm = () => {
@@ -318,7 +335,28 @@ const Auth = () => {
                 <button 
                   type="button"
                   className="switch-mode-btn"
-                  onClick={() => setMode(mode === 'login' ? 'register' : 'login')}
+                  onClick={() => {
+                    const newMode = mode === 'login' ? 'register' : 'login';
+                    setMode(newMode);
+                    setErrors({});
+                    
+                    // Set appropriate default values
+                    if (newMode === 'login') {
+                      setFormData({
+                        email: 'nguyenvana@example.com',
+                        password: '123456',
+                        name: '',
+                        confirmPassword: ''
+                      });
+                    } else {
+                      setFormData({
+                        email: '',
+                        password: '',
+                        name: '',
+                        confirmPassword: ''
+                      });
+                    }
+                  }}
                 >
                   {mode === 'login' ? 'Đăng ký ngay' : 'Đăng nhập'}
                 </button>
