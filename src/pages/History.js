@@ -71,7 +71,7 @@ const History = () => {
   };
 
   const handleViewDetails = (course) => {
-    navigate(`/course/${course.id}`);
+    navigate(`/course/${course}`);
   };
 
   if (loading) {

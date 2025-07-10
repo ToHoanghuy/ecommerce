@@ -95,7 +95,7 @@ const LazyLoadCourses = ({ searchTerm = '', category = '', priceRange = null }) 
   }, [initialLoad, courses.length]);
 
   const handleViewDetails = (course) => {
-    navigate(`/course/${course.id}`);
+    navigate(`/course/${course}`);
   };
 
   if (error && courses.length === 0) {

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { X, Star, Users, Clock, Heart, ShoppingCart, Award, BookOpen } from 'lucide-react';
 import { useAppState, useAppDispatch } from '../context/AppContext';
+import { useToast } from '../context/ToastContext';
 import './CourseModal.css';
 
 const CourseModal = ({ course, isOpen, onClose }) => {
   const state = useAppState();
   const { dispatch, actionTypes } = useAppDispatch();
+  const { showSuccess, showFavorite, showUnfavorite } = useToast();
 
   const isFavorite = course && state.favorites.includes(course.id);
   const isInCart = course && state.cart.includes(course.id);
@@ -25,14 +27,17 @@ const CourseModal = ({ course, isOpen, onClose }) => {
   const handleToggleFavorite = () => {
     if (isFavorite) {
       dispatch({ type: actionTypes.REMOVE_FROM_FAVORITES, payload: course.id });
+      showUnfavorite(`Đã bỏ yêu thích "${course.name}"`);
     } else {
       dispatch({ type: actionTypes.ADD_TO_FAVORITES, payload: course.id });
+      showFavorite(`❤️ Đã thêm "${course.name}" vào yêu thích!`);
     }
   };
 
   const handleAddToCart = () => {
     if (!isInCart) {
       dispatch({ type: actionTypes.ADD_TO_CART, payload: course.id });
+      showSuccess(`🛒 Đã thêm "${course.name}" vào giỏ hàng!`);
     }
   };
 

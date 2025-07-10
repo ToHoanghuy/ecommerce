@@ -45,7 +45,7 @@ const AISuggestions = () => {
   }, [state.suggestions]);
 
   const handleViewDetails = (course) => {
-    navigate(`/course/${course.id}`);
+    navigate(`/course/${course}`);
   };
 
   const handleRefresh = () => {

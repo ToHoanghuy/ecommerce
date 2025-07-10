@@ -159,11 +159,20 @@ const Auth = () => {
     }
   };
 
+  const handleBackClick = () => {
+    // Try to go back in history, fallback to home
+    if (window.history.length > 1) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <div className="auth-page">
       <div className="auth-container">
         {/* Back Button */}
-        <button onClick={() => navigate(-1)} className="back-btn">
+        <button onClick={handleBackClick} className="back-btn">
           <ArrowLeft />
           Quay lại
         </button>
